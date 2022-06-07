@@ -1,0 +1,308 @@
+#top-btn{
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 60px;
+    z-index: 99;
+    color: #4f99f0;
+    padding:0;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#top-btn:hover{
+    color: #e0eeff;
+}
+
+
+
+
+
+/*=========================================Home Section==========================================*/
+
+.home-text{
+    color: #ffffff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; /*add stroke to the text*/
+    
+}
+
+#home{
+    background-image: url('../images/back001.jpg'); /*background image */
+    width: 100%; /*width and height of the image*/
+    height: 100vh;
+    background-size: cover; /*cover the entire screen*/
+    /* background-position-x: 40px; */ /*position the image in x and y coordinates*/
+    background-position-y: -40px;
+    display: flex; /*change the display type and justify the content*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    opacity: 1;
+    background-color: #141414;
+}
+
+#home h5{
+    font-size: 1.3rem;
+    color: white !important;
+    font-weight: 500;
+}
+
+#home span{
+    color: #e0eeff;
+}
+
+@media (max-width: 1000px){
+    #home{
+        background-size: cover;
+        background-position-y: 40px;
+    }
+  }
+
+
+/*=====================================Why shop with us section=========================================*/
+.why_section .box {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 100px;
+    background-color: #002c3e;
+    padding: 45px 50px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.why_section .box .img-box {
+    margin-bottom: 15px;
+}
+  
+.why_section .box .img-box svg {
+    width: 55px;
+    height: auto;
+    fill: #ffffff;
+}
+
+.heading_container h2 {
+    position: relative;
+    margin-bottom: 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.heading_container h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background: #e0eeff;
+    margin: 10px auto 10px;
+}
+
+.heading_container.heading_center {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.detail-box h5{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.detail-box p{
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.why-shop-with-us{
+    font-size: 52px;
+}
+
+/*============================================New Section==============================================*/
+
+/*Images of new product*/
+#new .one img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#new .one {
+    position: relative;
+}
+
+/*Details of the new product*/
+#new .one .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #4f99f0;
+    font-weight: bold;
+    transition: 0.4s ease;
+    opacity: 0.7;
+    background-color: rgb(1,1,1);
+    width: 100%;
+    height: 100%;
+}
+
+/*details when hovered*/
+#new .one .details:hover{
+    background-color: cornsilk;
+}
+
+#new .one:nth-child(1) .details{ /* nth-child(1) indicates that accessing the 1st child(occurance) of the one class*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+
+#new .one:nth-child(2) .details{ /* nth-child(2) indicates that accessing the 2nd child(occurance) of the one class*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#new .one:nth-child(3) .details{ /* nth-child(3) indicates that accessing the 3rd child(occurance) of the one class*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+}
+
+
+
+/*====================================Featured Product Section==========================================*/
+
+
+/*DUPLICATE*/
+.product{
+    cursor: pointer;
+    margin-bottom: 2rem;
+    
+}
+
+
+
+.product img{
+    transition: 0.3s all;
+}
+
+.product:hover{
+    opacity: 0.7;
+}
+
+/*hide the buy now buttons when not hovered*/
+.product .buy-btn{
+    color: #000000;
+    background-color: #e0eeff;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+
+/*show the buttons when hovered over*/
+.product:hover .buy-btn{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+hr{
+    width: 60px;
+    height: 4px !important;
+    opacity: 1 !important;
+    background-color: #e0eeff;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    overflow-y: hidden;
+    left: 0;
+    position: relative;
+    transition: 0.5s all ease-out;
+    
+}
+
+.btn-scroll{
+    background-color: #e0eeff;
+    color: #fff;
+    padding: 10px 40px;
+    border: 0;
+    box-shadow: 0 0 10px #e0eeff;
+    font-size: 28px;
+    margin: 0 5px;
+    z-index: 1;
+}
+
+#btn-scroll-right{
+    position: absolute;
+    right: 0px;
+    
+}
+
+@media  (max-width: 580px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+/*=========================================Banner section===============================================*/
+
+
+/*banner background*/
+#banner{
+    background-image: url('../images/back1.jpg'); /*background image */
+    width: 100%; /*width and height of the image*/
+    height: 60vh;
+    background-size: cover; /*cover the entire screen*/
+    background-position-x: center; /*position the image in x and y coordinates*/
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*will attach the image to the element*/
+    display: flex; /*change the display type and justify the content*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#banner h1{
+    color: #fff;
+}
+
+#banner h4{
+    color: #fff;
+}
+
+/*add stroke to the text*/
+.banner-text{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/*Color of button*/
+#banner button{
+    color: #000000;
+    background-color: #e0eeff;
+}
+
+/*Hover effect on button*/
+#banner button:hover{
+    color: #ffffff;
+    background-color: #1d1d1d;
+}

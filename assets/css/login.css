@@ -1,0 +1,64 @@
+/*==================================================Login Page==================================================*/
+
+
+/* section #login-page{
+    margin-top: 50% !important;
+    padding-top: 100px;
+} */
+
+/*center the form*/
+/*align the form*/
+#login-form{
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #4f99f0;
+}
+
+/*for the input*/
+/*reduce the width*/
+#login-form input{
+    width: 50%;
+    margin: 5px auto;
+}
+
+#login-form input[type="checkbox"]{
+    width: 1em;
+    height: 1em;
+    padding-right: -24px !important;
+}
+
+.check label{
+    font-size: 14px;
+}
+
+
+/*login button*/
+#login-form #login-btn{
+    background-color: #4f99f0;
+    color: #fff;
+}
+
+/*Dont have an account button*/
+#login-form #register-url{
+    color: #4f99f0;
+}
+
+
+
+.forgot-password a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #4f99f0;
+}
+
+@media (max-width: 1000px){
+    
+    #login-form{
+        width: 100%;
+        margin: 35px auto;
+        text-align: center;
+        padding: 20px;
+    }
+}
