@@ -1,0 +1,14 @@
+{
+    "name": "Pet World",
+    "icons": [
+        {
+            "src": "assets/images/logo-pwa.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        }
+    ],
+    "start_url": "index.php",
+    "background_color": "#000000",
+    "display": "standalone",
+    "theme_color": "#b5cce7"
+}

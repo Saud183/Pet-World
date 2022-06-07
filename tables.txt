@@ -1,0 +1,150 @@
+
+
+
+CREATE TABLE IF NOT EXISTS `products` (
+  `product_id` int(11) NOT NULL AUTO_INCREMENT,
+  `product_name` varchar(100) NOT NULL,
+  `product_category` varchar(100) NOT NULL,
+  `product_breed` varchar(100) NOT NULL,
+  `product_description` text(1000) NOT NULL,
+  `product_image` varchar(255) NOT NULL,
+  `product_price` decimal(10,2) NOT NULL, /* 9999.99 */
+  `product_weight` decimal(6,2) NOT NULL,/*99.99*/
+  PRIMARY KEY (`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+CREATE TABLE IF NOT EXISTS `orders` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_cost` decimal(10,2) NOT NULL,
+  `order_status` varchar(100) NOT NULL DEFAULT 'on_hold',
+  `user_id` int(11) NOT NULL,
+  `user_phone` bigint(11) NOT NULL,
+  `user_city` varchar(255) NOT NULL,
+  `user_address` varchar(255) NOT NULL,
+  `order_date` DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE IF NOT EXISTS `order_items` (
+  `item_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) NOT NULL,
+  `product_id` varchar(255) NOT NULL,
+  `product_name` varchar(255) NOT NULL,
+  `product_image` varchar(255) NOT NULL,
+  `product_price` decimal(10,2) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `order_date` DATETIME  NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`item_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(100) NOT NULL,
+  `user_email` varchar(100) NOT NULL,
+  `user_password` varchar(100) NOT NULL,
+  `user_phone` bigint(11) NOT NULL,
+  `user_reset_token` VARCHAR(255) NULL,
+  `user_reset_token_expiry` DATE NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `UX_Constraint` (`user_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+CREATE TABLE IF NOT EXISTS `payments` (
+  `payment_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `transaction_id` varchar(250) NOT NULL,
+  `payment_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`payment_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `admins` (
+  `admin_id` int(11)NOT NULL AUTO_INCREMENT,
+  `admin_name` varchar(255) NOT NULL,
+  `admin_email` varchar(255) NOT NULL,
+  `admin_password` varchar(255) NOT NULL,
+  PRIMARY KEY (`admin_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE IF NOT EXISTS `ngo` (
+  `ngo_id` int(11) NOT NULL AUTO_INCREMENT,
+  `ngo_name` varchar(100) NOT NULL,
+  `ngo_type` varchar(100) NOT NULL,
+  `ngo_map` text(1000) NOT NULL,
+  `ngo_address` varchar(255) NOT NULL,
+  `ngo_number` bigint(11) NOT NULL,
+  `ngo_description` text(1000) NOT NULL,
+  PRIMARY KEY (`ngo_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `vet` (
+  `vet_id` int(11) NOT NULL AUTO_INCREMENT,
+  `vet_name` varchar(100) NOT NULL,
+  `vet_profession` varchar(100) NOT NULL,
+  `vet_image` varchar(255) NOT NULL,
+  `vet_clinic_name` varchar(100) NOT NULL,
+  `vet_address` varchar(100) NOT NULL,
+  `vet_number` bigint(11) NOT NULL,
+  `vet_email` varchar(255) NOT NULL,
+  `vet_consult_fee` int(9) NOT NULL,
+  `vet_experience` int(9) NOT NULL,
+  `vet_degree` varchar(255) NOT NULL, 
+  `vet_description` text(1000) NOT NULL,
+  `vet_map` text(1000) NOT NULL,
+  `vet_whereabout` text(1000) NOT NULL,
+  `vet_services` text(1000) NOT NULL,
+  `vet_faq1` text(1000) NOT NULL,
+  `vet_faq2` text(1000) NOT NULL,
+  PRIMARY KEY (`vet_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `breed`(
+  `breed_id` int(11) NOT NULL AUTO_INCREMENT,
+  `breed_name` varchar(100) NOT NULL,
+  `breed_image` varchar(255) NOT NULL,
+  `breed_origin` varchar(100) NOT NULL,
+  `breed_male_weight_min` decimal(4,1) NOT NULL,
+  `breed_male_weight_max` decimal(4,1) NOT NULL,
+  `breed_female_weight_min` decimal(4,1) NOT NULL,
+  `breed_female_weight_max` decimal(4,1) NOT NULL,
+  `breed_male_height_min` decimal(4,1) NOT NULL,
+  `breed_male_height_max` decimal(4,1) NOT NULL,
+  `breed_female_height_min` decimal(4,1) NOT NULL,
+  `breed_female_height_max` decimal(4,1) NOT NULL,
+  `breed_life_expectancy_min` int(5) NOT NULL,
+  `breed_life_expectancy_max` int(5) NOT NULL, 
+  `breed_litter_size_min` decimal(3,1) NOT NULL,
+  `breed_litter_size_max` decimal(3,1) NOT NULL,
+  `breed_highlight` text(1000) NOT NULL,
+  `breed_appearance` text(1000) NOT NULL,
+  `breed_history` text(1000) NOT NULL,
+  `breed_health_care` text(1000) NOT NULL,
+  `breed_living_condition` text(1000) NOT NULL,
+  `breed_exercise` text(1000) NOT NULL,
+  `breed_grooming` text(1000) NOT NULL,
+  `breed_pros` text(1000) NOT NULL,
+  `breed_cons` text(1000) NOT NULL,
+  PRIMARY KEY(`breed_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `cancel` (
+  `cancel_id` int(11) NOT NULL AUTO_INCREMENT,
+  `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `order_cost` decimal(10,2) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `bank_name` varchar(100) NOT NULL,
+  `bank_branch` varchar(100) NOT NULL,
+  `account_number` v(20) NOT NULL,
+  `ifsc_code` varchar(11) NULL,
+  `cancel_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`cancel_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
