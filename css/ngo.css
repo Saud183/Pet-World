@@ -1,0 +1,54 @@
+/*===================================================NGO============================================================*/
+
+.ngo{
+    display: flex;
+    margin: 10px auto;
+    padding: 15px 18px;
+    border-bottom: 1px solid #4f99f0;
+}
+
+.ngo:last-child{
+    border-bottom: none;
+}
+
+.ngo-head h3{
+    font-size: 1.6rem;
+    margin-top: 15px;
+}
+  
+.ngo .ngo-map{
+    padding-left: 25px;
+    
+}
+  
+.ngo .ngo-details{
+    flex: 1;
+}
+  
+.ngo .ngo-details h5{
+    margin: 10px 0;
+    font-weight: 600;
+}
+  
+  
+.ngo-details i{
+    margin-right: 6px;
+}
+  
+/*responsive*/
+@media(max-width: 800px){
+  
+  
+    .ngo{
+      flex-direction: column;
+      align-items: center; 
+      text-align: center;
+    }
+  
+    .ngo .ngo-details p{
+      margin-bottom: 20px;
+    }
+  
+  
+  
+}

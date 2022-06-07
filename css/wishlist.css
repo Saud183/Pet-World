@@ -1,0 +1,97 @@
+/*================================================= Wishlist ========================================================= */
+
+
+/*design the table*/
+.wishlist table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wishlist .product-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*table heading*/
+.wishlist th{
+    text-align: left;
+    padding: 5px 10px;
+    color: #000;
+    background-color: #e0eeff;
+}
+
+.wishlist td{
+    padding: 10px 20px;
+}
+
+/*image size in the cart*/
+.wishlist td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.cart td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+.wishlist td a{
+    color: #e0eeff;
+}
+
+/*style the remove and edit button*/
+.cart .remove-btn{
+    color: #4f99f0;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #fff;
+    border: none;
+    width: fit-content;
+}
+
+.cart .edit-btn{
+    color: #4f99f0;
+    text-decoration: none;
+    font-size: 15px;
+    background-color: #fff;
+    border: none;
+    width: fit-content;
+}
+
+.wishlist .product-info p{
+    margin: 3px;
+}
+
+/*shpowing total in cart*/
+.cart-total{
+    display: flex;
+    justify-content: flex-end; /*to display table on the right side*/
+}
+
+.cart-total table{
+    width: 100%;
+    max-width: 500px;
+    border-top: 3px solid #e0eeff;
+}
+
+.wishlist button{
+    text-transform: capitalize;
+}
+
+/*last-child indicates to apply the style to the last element of the particular tag/class/id in the selected content*/
+/* td:last-child{
+    text-align: right;
+} */
+
+/* th:nth-child(2){
+    padding-left: 34px;
+} */
+
+th:last-child{
+    text-align: right;
+    padding-right: 40px;
+}
+
+

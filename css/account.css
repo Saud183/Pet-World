@@ -1,0 +1,118 @@
+
+/*=====================================================Account page================================================*/
+
+/*account form*/
+#account-form{
+    width: 50%;
+    margin: 35px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/*account form input*/
+#account-form input{
+    margin: 5px auto;
+}
+
+/* account form change password button*/
+#account-form #change-pass-btn{
+    color: #fff;
+    background-color: #4f99f0;
+}
+
+#account-form #change-pass-btn:hover{
+    color: #000;
+    background-color: #e0eeff;
+}
+
+
+/*style of order and logout button*/
+.account-info #orders-btn{
+    color: #4f99f0;
+    text-decoration: none;
+}
+
+.account-info p{
+    font-size: 18px;
+}
+
+#logout-btn{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.btn-logout{
+    background-color: #4f99f0;
+    margin-top: 5px;
+    color: #fff;
+    font-size: 18px;
+
+}
+
+.btn-logout:hover, #logout-btn:hover{
+    background-color: #e0eeff;
+    color: #000;
+}
+
+.form-helper{
+    font-size: 13.5px;
+    text-align: left;
+}
+
+
+
+/*orders*/
+
+/*table for orders*/
+.orders table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/*product info in table*/
+.orders .product-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*heading in table*/
+.orders th{
+    /* text-align: left; */
+    padding: 5px 10px;
+    color: #000;
+    background-color: #e0eeff;
+}
+
+/*second iteration of th (date)*/
+/* .orders th:nth-child(2){
+    text-align: right;
+} */
+
+.orders td{
+    padding: 10px 20px;
+}
+
+/* orders image*/
+.orders td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.orders .order-details-btn{
+    color: #ffffff;
+    background-color: #4f99f0;
+}
+
+@media (max-width: 770px){
+
+    #account-form{
+        width: 70%;
+        margin: 35px auto;
+        text-align: center;
+        padding: 20px;
+    }
+
+}
+

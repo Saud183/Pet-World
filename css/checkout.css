@@ -1,0 +1,27 @@
+/*===============================================Checkout Page======================================================*/
+
+#checkout-form .checkout-small-element {
+    display: inline-block;
+    width: 48%;
+    margin: 10px auto;
+}
+
+#checkout-form .checkout-large-element{
+    width: 96%;
+}
+
+#checkout-form .checkout-btn-container{
+    margin: 10px;
+    text-align: right;
+    margin-right: 40px;
+}
+
+#checkout-form #checkout-btn{
+    color: #fff;
+    background-color: #4f99f0;
+}
+
+#checkout-form #checkout-btn:hover{
+    color: #000;
+    background-color: #e0eeff;
+}

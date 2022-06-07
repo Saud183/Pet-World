@@ -1,0 +1,56 @@
+/*=================================================About us Page=================================================*/
+
+#about hr{
+    margin-left: 25%;
+}
+
+#about p{
+    font-size: 18px;
+}
+
+#about p span{
+    color: #4f99f0;
+    text-decoration: underline;
+}
+
+#single-line{
+    margin-top: -70px;
+}
+
+aside#sidebar{
+    margin-top: 10px;
+}
+
+.dark {
+    padding: 16px !important;
+    background: #4f99f0;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+aside .dark h3{
+    font-size: 20px;
+}
+
+aside .dark p{
+    font-size: 16px;
+}
+
+/* Boxes */
+#boxes {
+    margin-top: 20px;
+}
+
+#boxes .box {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#boxes .box img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+}
